@@ -3,9 +3,10 @@ import './Konyv.css';
 
 
 function Konyv(props) {
-    function kosarba(){
+    function kosarKezeles(){
         console.log(props.konyvObj)
-        props.kosarKezelesFv(props.konyvObj);
+        //app.js kosárkezelés hívása
+        props.kosarKezeles(props.konyvObj);
     }
 
   return (
@@ -13,7 +14,7 @@ function Konyv(props) {
         <h3>{props.konyvObj.szerzo}</h3>
         <p>{props.konyvObj.cim}</p>
         <p>{props.konyvObj.ar}</p> 
-        <button onClick={kosarba}>Kosárba</button>    
+        <button onClick={kosarKezeles}>Kosárba</button>    
     </div>
   );
 }
