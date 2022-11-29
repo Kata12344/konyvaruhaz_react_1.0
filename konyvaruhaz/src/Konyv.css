@@ -1,0 +1,10 @@
+.konyv {
+    border: 1px solid gray;
+    padding: 10px
+}
+
+.konyv>h3 {
+    background-color:rgb(157, 163, 163);
+    padding: 8px;
+    margin: 0;
+}

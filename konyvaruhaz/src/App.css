@@ -1,0 +1,31 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+article {
+  min-height: 70vh;
+  display:grid;
+  grid-template-columns:repeat(3,1fr)
+}
+footer{
+  min-height: 10vh;
+  background-color: #282c34;
+}
+
+@media screen and (max-width:400px) {
+  article {
+   
+    grid-template-columns:repeat(1,1fr)
+  }
+}
