@@ -40,7 +40,7 @@ function App() {
     setDb(kosarModel.getDarabszam());
     //összár
     setOsszAr (kosarModel.getOsszar());
-    console.log(kosaram)
+    //console.log(kosaram)
 
     //console.log(db)
     
@@ -52,12 +52,17 @@ function hozzaad(adat){
       setKosaram(kosarModel.getKosar())
     }
 
-    function elvesz(adat){
-      console.log(adat)
-          kosarModel.setKosar2(adat);
-          setKosaram(kosarModel.getKosar())
-        }
-  
+function elvesz(adat){
+  console.log(adat)
+      kosarModel.setKosar2(adat);
+      setKosaram(kosarModel.getKosar())
+    }
+
+    function torol(adat){
+      console.log("töröl appban")
+      kosarModel.setKosarTorol(adat);
+      setKosaram(kosarModel.getKosar());
+    }
 
   return (
     <div className="App">
@@ -80,7 +85,7 @@ function hozzaad(adat){
         <tbody>
         {
           kosaram.map((elem, index) => {
-            return (<Kosar kosar={elem} key={index} hozzaad = {hozzaad} elvesz = {elvesz} />)
+            return (<Kosar kosar={elem} key={index} hozzaad = {hozzaad} elvesz = {elvesz}  torol = {torol} />)
           }
           )
         }

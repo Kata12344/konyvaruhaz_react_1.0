@@ -8,9 +8,7 @@ class KosarModel {
         this.#osszAr = 0;
     }
 
-    getKosar(){
-        return this.#kosar;
-    }
+    
 
     setKosar(adat){
         let azonosElem = this.#kosar.findIndex((elem)=>{
@@ -23,7 +21,7 @@ class KosarModel {
             this.#kosar.push(adat);
             this.#kosar[this.#kosar.length - 1].db = 1;
         }
-        console.log(this.#kosar)
+        //console.log(this.#kosar)
         
     }
 
@@ -38,12 +36,21 @@ class KosarModel {
             this.#kosar.push(adat);
             this.#kosar[this.#kosar.length - 1].db = 1;
         }
-        console.log(this.#kosar)
+        //console.log(this.#kosar)
         
     }
 
+    setKosarTorol(adat){
+        console.log("töröl modellben")
+        let azonosElem = this.#kosar.findIndex((elem)=>{
+            return elem.id == adat.id;
+        });
+        if(adat.id == azonosElem){
+            this.#kosar.azonosElem.remove();
+        }
+    }
 
-    
+
     getDarabszam(){
         return this.#kosar.length
     }
@@ -55,6 +62,10 @@ class KosarModel {
         })
         this.#osszAr = ossz
         return ossz
+    }
+
+    getKosar(){
+        return this.#kosar;
     }
 
     

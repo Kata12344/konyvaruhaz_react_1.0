@@ -15,8 +15,12 @@ function Kosar(props){
         props.elvesz(props.kosar)
     }
 
+    function torol(){
+        props.torol(props.kosar)
+    }
+
     return (
-        <tr>
+        <tr className="konyvek">
         <td>{props.kosar.id}</td>
         <td>{props.kosar.szerzo}</td>
         <td>{props.kosar.cim}</td>
@@ -24,7 +28,7 @@ function Kosar(props){
         <td>{props.kosar.db}</td>
         <td><button onClick={hozzaad}>+</button></td>
         <td><button onClick={elvesz}>-</button></td>
-        <td><button>Töröl</button></td>
+        <td><button onClick={torol}>Töröl</button></td>
         </tr>
     )
 }
